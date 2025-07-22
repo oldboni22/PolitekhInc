@@ -1,5 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Diagnostics;
+using RabbitMqController;
+using RabbitMqController.Abstractions;
 
 namespace PolitekhInc.Extensions;
 
@@ -36,4 +38,13 @@ public static class WebApplicationExtensions
             })
         );
     }
+
+    public static async Task InitializeRabbitMq(this WebApplication application,string hostName)
+    {
+        var sender = application.Services.GetService<IRabbitMqSender>() as RabbitMqSender;
+        await sender!.InitializeAsync(hostName);
+        var receiver = application.Services.GetService<IRabbitMqReceiver>() as RabbitMqReceiver;
+        await receiver!.InitializeAsync(hostName);
+    }
+    
 }

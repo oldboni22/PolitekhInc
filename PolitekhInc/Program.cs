@@ -5,12 +5,15 @@ namespace PolitekhInc;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
         
-        builder.ConfigureLogging();
+        builder.Configuration.AddJsonFile("appsettings.json");
         
+        builder.ConfigureLogging();
+
+        builder.Services.AddRabbitMq();
         builder.Services.AddAuthorization();
         
         builder.Services.AddOpenApi();
@@ -28,8 +31,9 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
-        
 
-        app.Run();
+
+        await app.InitializeRabbitMq(app.Configuration.GetConnectionString("RabbitMq")!);
+        await app.RunAsync();
     }
 }

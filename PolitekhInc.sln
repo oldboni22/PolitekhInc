@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Abstractions", "Repository.Abstractions\Repository.Abstractions.csproj", "{5F88F70D-05D4-439E-BD61-F4A151653F51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqController", "RabbitMqController\RabbitMqController.csproj", "{9A61BDB3-A8F5-4FA4-B3A7-F390E1A1F50F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqController.Abstractions", "RabbitMqController.Abstractions\RabbitMqController.Abstractions.csproj", "{B19D178F-57F6-40B1-9981-C5C03E6FFCC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{5F88F70D-05D4-439E-BD61-F4A151653F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F88F70D-05D4-439E-BD61-F4A151653F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F88F70D-05D4-439E-BD61-F4A151653F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A61BDB3-A8F5-4FA4-B3A7-F390E1A1F50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A61BDB3-A8F5-4FA4-B3A7-F390E1A1F50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A61BDB3-A8F5-4FA4-B3A7-F390E1A1F50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A61BDB3-A8F5-4FA4-B3A7-F390E1A1F50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19D178F-57F6-40B1-9981-C5C03E6FFCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19D178F-57F6-40B1-9981-C5C03E6FFCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19D178F-57F6-40B1-9981-C5C03E6FFCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19D178F-57F6-40B1-9981-C5C03E6FFCC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
