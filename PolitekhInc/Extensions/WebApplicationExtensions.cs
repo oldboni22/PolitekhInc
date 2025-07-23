@@ -41,10 +41,10 @@ public static class WebApplicationExtensions
 
     public static async Task InitializeRabbitMq(this WebApplication application,string hostName)
     {
-        var sender = application.Services.GetService<IRabbitMqSender>() as RabbitMqSender;
-        await sender!.InitializeAsync(hostName);
-        var receiver = application.Services.GetService<IRabbitMqReceiver>() as RabbitMqReceiver;
-        await receiver!.InitializeAsync(hostName);
+        var sender = application.Services.GetRequiredService<IRabbitMqSender>();
+        await sender!.InitializeAsync();
+        var receiver = application.Services.GetRequiredService<IRabbitMqReceiver>();
+        await receiver!.InitializeAsync();
     }
     
 }
